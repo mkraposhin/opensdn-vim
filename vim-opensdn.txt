@@ -1,4 +1,6 @@
 set number
-command! -nargs=1 Compile terminal bash -c "source <args>-env.sh && ./opensdn_sync_and_build.sh"
+set wrap
+set laststatus=2
+command! -nargs=1 Compile terminal bash -c "source <args>-env.sh && ./opensdn_sync_and_build.sh 2>err-<args>.log"
 command! -nargs=1 Restart terminal bash -c "source <args>-env.sh && ./restart_service.sh"
 
