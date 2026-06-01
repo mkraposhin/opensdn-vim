@@ -1,0 +1,2 @@
+set number
+command! -nargs=1 Compile terminal bash -c "source <args>-env.sh && ./opensdn_sync_and_build.sh"
